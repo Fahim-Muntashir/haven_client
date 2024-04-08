@@ -11,26 +11,26 @@ const Navbar = () => {
     return (
         <div className='bg-[#00396B]'>
             <Container>
-                <div className='flex justify-between text-[#fafafaf4] py-1'>
+                <div className='flex justify-between text-[#fafafaf4]'>
                     <div className='flex gap-x-4'>
-                        <a href="" className=' border-x-[1px] px-2'> <FaFacebookF />
+                        <a href="" className=' border-x-[1px] px-2 py-1'> <FaFacebookF />
                         </a>
-                        <a href="" className=' border-x-[1px] px-2'> <FaLinkedinIn />
+                        <a href="" className=' border-x-[1px] px-2 py-1'> <FaLinkedinIn />
                         </a>
-                        <a href="" className=' border-x-[1px] px-2'> <FaInstagram />
+                        <a href="" className=' border-x-[1px] px-2 py-1'> <FaInstagram />
 
                         </a>
-                        <a href="" className=' border-x-[1px] px-2'> <FaPinterestP />
+                        <a href="" className=' border-x-[1px] px-2 py-1'> <FaPinterestP />
                         </a>
-                        <a href="" className=' border-x-[1px] px-2'> <BsYoutube />
+                        <a href="" className=' border-x-[1px] px-2 py-1'> <BsYoutube />
                         </a>
-                        <a href="" className=' border-x-[1px] px-2'> <FaXTwitter />
+                        <a href="" className=' border-x-[1px] px-2 py-1'> <FaXTwitter />
                         </a>
                     </div>
                     <div className="text-sm flex gap-x-2">
-                        <p>fahimasdf07@gmail.com</p>
-                        <p>-19482300</p>
-                        <p>saved</p>
+                        <p className='border-x-[0.3px] px-2 py-1'>fahimasdf07@gmail.com</p>
+                        <p className='border-x-[1px] px-2 py-1'>-19482300</p>
+                        <p className='border-x-[1px] px-2 py-1'>saved</p>
                     </div>
 
                 </div>
