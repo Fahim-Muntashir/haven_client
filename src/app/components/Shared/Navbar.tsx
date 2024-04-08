@@ -1,36 +1,92 @@
 import React from 'react';
 import Container from './Container';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterestP } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaPinterestP, FaRegHeart } from "react-icons/fa";
 import { BsYoutube } from 'react-icons/bs';
 import { FaXTwitter } from "react-icons/fa6";
 import Image from 'next/image';
 import logo from '../../../../public/assests/haven.png'
+import { MdEmail, MdOutlineEmail } from 'react-icons/md';
+import { CiHeart } from 'react-icons/ci';
+
 
 
 const Navbar = () => {
-    return (
-        <div className='bg-[#00396B]'>
-            <Container>
-                <div className='flex justify-between text-[#fafafaf4]'>
-                    <div className='flex gap-x-4'>
-                        <a href="" className=' border-x-[1px] px-2 py-1'> <FaFacebookF />
-                        </a>
-                        <a href="" className=' border-x-[1px] px-2 py-1'> <FaLinkedinIn />
-                        </a>
-                        <a href="" className=' border-x-[1px] px-2 py-1'> <FaInstagram />
 
-                        </a>
-                        <a href="" className=' border-x-[1px] px-2 py-1'> <FaPinterestP />
-                        </a>
-                        <a href="" className=' border-x-[1px] px-2 py-1'> <BsYoutube />
-                        </a>
-                        <a href="" className=' border-x-[1px] px-2 py-1'> <FaXTwitter />
-                        </a>
+    const socialLink = [
+        {
+            link: "facebook.com",
+            icon: <FaFacebookF />
+        }, {
+            link: "linkedin.com",
+            icon: <FaLinkedinIn />,
+
+        }, {
+            link: "linkedin.com",
+            icon: <FaXTwitter />,
+
+        }, {
+            link: "linkedin.com",
+            icon: <FaLinkedinIn />,
+
+        }, {
+            link: "linkedin.com",
+            icon: <BsYoutube />
+        }, {
+            link: "linkedin.com",
+            icon: <FaPinterestP />
+        }
+    ]
+
+    const contactNav = [
+        {
+            name: "fahimasdf07@gmail.com",
+            icon: <MdOutlineEmail />
+
+        },
+        {
+            name: "+44 7123 4567",
+            icon: <FaPhoneAlt />
+
+        }, {
+            name: "Saved Item",
+            icon: <FaRegHeart />
+
+
+        }
+    ]
+
+    return (
+        <div className='bg-[#00396B] '>
+            <Container>
+                <div className=' justify-between text-[#fafafaf4] hidden  lg:flex'>
+                    <div className='flex gap-x-4'>
+                        {
+                            socialLink.map((item) => (
+                                <a href="" className=' border-x-[1px] px-2 py-1 border-gray-600'> {
+                                    item.icon
+                                }
+                                </a>
+                            ))
+                        }
+
                     </div>
                     <div className="text-sm flex gap-x-2">
-                        <p className='border-x-[0.3px] px-2 py-1'>fahimasdf07@gmail.com</p>
-                        <p className='border-x-[1px] px-2 py-1'>-19482300</p>
-                        <p className='border-x-[1px] px-2 py-1'>saved</p>
+                        {
+                            contactNav.map((item) => (
+
+                                <a href="" className=' border-x-[1px] px-2 py-1 border-gray-600 flex items-center gap-x-3 text-sm'> <span className='text-lg'>
+                                    {
+                                        item.icon
+                                    }
+                                </span> <span> {
+                                    item.name
+                                }</span>
+                                </a>
+
+
+
+                            ))
+                        }
                     </div>
 
                 </div>
