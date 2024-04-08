@@ -7,6 +7,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import Image from 'next/image';
 import logo from '../../../../public/assests/haven.png'
 import { MdOutlineEmail } from 'react-icons/md';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoMdClose } from 'react-icons/io';
 
 
 
@@ -128,8 +130,10 @@ const Navbar = () => {
                         </div>
                         <div>
                             <button className='bg-[rgb(0,174,255)] px-6 py-1 font-bold'>Login</button>
-                            <button onClick={() => setOpen(true)} className='md:hidden px-3'>X</button>
-                            <button onClick={() => setOpen(false)} className='md:hidden px-3'>X</button>
+                            <button onClick={() => setOpen(true)} className={`${open ? "hidden" : ""} md:hidden px-3`} > <GiHamburgerMenu />
+                            </button>
+                            <button onClick={() => setOpen(false)} className={`${open ? "" : "hidden"} md:hidden px-3`}><IoMdClose />
+                            </button>
 
                         </div>
                     </div>
@@ -140,22 +144,35 @@ const Navbar = () => {
 
 
             </div >
-            <div className={`${open ? 'w-[80%] ms-0 transition-all delay-150' : ''} bg-gray-200 -ms-[500px] fixed h-screen`}>
+            <div className={`${open ? 'w-[80%] ms-0 transition-all  delay-150' : ''} bg-[#003461] px-3 py-10  text-white -ms-[500px] fixed h-screen flex flex-col justify-between`}>
+
                 <ul className="flex flex-col">
                     <li>
-                        <a href="#" className="block py-2 px-3 " aria-current="page">Home</a>
+                        <a href="#" className="block py-2 px-3 border-b my-1 border-b-gray-600" aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="#" className="block py-2 px-3 ">About</a>
+                        <a href="#" className="block py-2 px-3 border-b my-1 border-b-gray-600" >About</a>
                     </li>
                     <li>
-                        <a href="#" className="block py-2 px-3 ">Services</a>
+                        <a href="#" className="block py-2 px-3 border-b my-1 border-b-gray-600" >Services</a>
                     </li>
                     <li>
-                        <a href="#" className="block py-2 px-3">Contact</a>
+                        <a href="#" className="block py-2 px-3 border-b my-1 border-b-gray-600"  >Contact</a>
                     </li>
                 </ul>
-            </div>
+
+
+                <div className='flex justify-evenly mt-auto mb-10 bg-'> {
+                    socialLink.map((item) => (
+                        <a href="" className=' border-x-[1px] px-2 py-1 border-gray-600'> {
+                            item.icon
+                        }
+                        </a>
+                    ))
+                }
+                </div>
+
+            </div >
 
         </div >
     );
