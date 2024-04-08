@@ -1,12 +1,12 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import Container from './Container';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaPinterestP, FaRegHeart } from "react-icons/fa";
 import { BsYoutube } from 'react-icons/bs';
 import { FaXTwitter } from "react-icons/fa6";
 import Image from 'next/image';
 import logo from '../../../../public/assests/haven.png'
-import { MdEmail, MdOutlineEmail } from 'react-icons/md';
-import { CiHeart } from 'react-icons/ci';
+import { MdOutlineEmail } from 'react-icons/md';
 
 
 
@@ -25,6 +25,12 @@ const Navbar = () => {
             icon: <FaXTwitter />,
 
         }, {
+
+            link: " FaInstagram",
+            icon: <FaInstagram></FaInstagram>
+        },
+
+        {
             link: "linkedin.com",
             icon: <FaLinkedinIn />,
 
@@ -55,8 +61,11 @@ const Navbar = () => {
         }
     ]
 
+
+    const [open, setOpen] = useState(false);
+
     return (
-        <div className='bg-[#00396B] '>
+        <div className='bg-[#003461]'>
             <Container>
                 <div className=' justify-between text-[#fafafaf4] hidden  lg:flex'>
                     <div className='flex gap-x-4'>
@@ -93,24 +102,46 @@ const Navbar = () => {
             </Container>
 
             {/* Main Nav */}
-            <div className='bg-[#003461] text-white'>
+            <div className='bg-[#00396B] text-white'>
 
 
                 <Container>
 
-                    <div className='flex justify-between items-center'>
-
+                    <div className='flex justify-between items-center py-2'>
                         <Image src={logo} width={100} height={400} alt='haven'></Image>
-                        <div>a</div>
+                        <div className={`items-center justify-between hidden w-full  md:flex md:w-auto sticky `} id="navbar-sticky">
+                            <ul className="flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
+                                <li>
+                                    <a href="#" className="block py-2 px-3 " aria-current="page">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#" className="block py-2 px-3 ">About</a>
+                                </li>
+                                <li>
+                                    <a href="#" className="block py-2 px-3 ">Services</a>
+                                </li>
+                                <li>
+                                    <a href="#" className="block py-2 px-3">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
                         <div>
-                            Login
+                            <button className='bg-[rgb(0,174,255)] px-6 py-1 font-bold'>Login</button>
+                            <button onClick={() => setOpen(true)} className='md:hidden px-3'>X</button>
+                            <button onClick={() => setOpen(false)} className='md:hidden px-3'>X</button>
+
                         </div>
                     </div>
+
+                    <div className={`${open ? ' ' : 'hidden'} h-screen bg-black`}>
+
+
+                    </div>
                 </Container >
-            </div>
+            </div >
 
 
-        </div>
+        </div >
     );
 };
 
