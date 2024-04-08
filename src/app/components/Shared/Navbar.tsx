@@ -65,48 +65,49 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className='bg-[#003461]'>
-            <Container>
-                <div className=' justify-between text-[#fafafaf4] hidden  lg:flex'>
-                    <div className='flex gap-x-4'>
-                        {
-                            socialLink.map((item) => (
-                                <a href="" className=' border-x-[1px] px-2 py-1 border-gray-600'> {
-                                    item.icon
-                                }
-                                </a>
-                            ))
-                        }
+        <div className=''>
+            <div className='bg-[#003461]'>
 
-                    </div>
-                    <div className="text-sm flex gap-x-2">
-                        {
-                            contactNav.map((item) => (
-
-                                <a href="" className=' border-x-[1px] px-2 py-1 border-gray-600 flex items-center gap-x-3 text-sm'> <span className='text-lg'>
-                                    {
+                <Container>
+                    <div className=' justify-between text-[#fafafaf4] hidden  lg:flex'>
+                        <div className='flex gap-x-4'>
+                            {
+                                socialLink.map((item) => (
+                                    <a href="" className=' border-x-[1px] px-2 py-1 border-gray-600'> {
                                         item.icon
                                     }
-                                </span> <span> {
-                                    item.name
-                                }</span>
-                                </a>
+                                    </a>
+                                ))
+                            }
+
+                        </div>
+                        <div className="text-sm flex gap-x-2">
+                            {
+                                contactNav.map((item) => (
+
+                                    <a href="" className=' border-x-[1px] px-2 py-1 border-gray-600 flex items-center gap-x-3 text-sm'> <span className='text-lg'>
+                                        {
+                                            item.icon
+                                        }
+                                    </span> <span> {
+                                        item.name
+                                    }</span>
+                                    </a>
 
 
 
-                            ))
-                        }
+                                ))
+                            }
+                        </div>
+
                     </div>
-
-                </div>
-            </Container>
-
+                </Container>
+            </div>
             {/* Main Nav */}
             <div className='bg-[#00396B] text-white'>
 
 
                 <Container>
-
                     <div className='flex justify-between items-center py-2'>
                         <Image src={logo} width={100} height={400} alt='haven'></Image>
                         <div className={`items-center justify-between hidden w-full  md:flex md:w-auto sticky `} id="navbar-sticky">
@@ -133,13 +134,28 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div className={`${open ? ' ' : 'hidden'} h-screen bg-black`}>
 
-
-                    </div>
                 </Container >
-            </div >
 
+
+
+            </div >
+            <div className={`${open ? 'w-[80%] ms-0 transition-all delay-150' : ''} bg-gray-200 -ms-[500px] fixed h-screen`}>
+                <ul className="flex flex-col">
+                    <li>
+                        <a href="#" className="block py-2 px-3 " aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" className="block py-2 px-3 ">About</a>
+                    </li>
+                    <li>
+                        <a href="#" className="block py-2 px-3 ">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" className="block py-2 px-3">Contact</a>
+                    </li>
+                </ul>
+            </div>
 
         </div >
     );
