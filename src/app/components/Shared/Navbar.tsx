@@ -162,7 +162,7 @@ const Navbar = () => {
                 </ul>
 
 
-                <div className='flex justify-evenly mt-auto mb-10 bg-'> {
+                <div className='flex justify-evenly mt-auto mb-10'> {
                     socialLink.map((item) => (
                         <a href="" className=' border-x-[1px] px-2 py-1 border-gray-600'> {
                             item.icon
