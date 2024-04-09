@@ -144,7 +144,7 @@ const Navbar = () => {
 
 
             </div >
-            <div className={`${open ? 'w-[80%] ms-0 transition-all  delay-150' : ''} bg-[#003461] px-3 py-10  text-white -ms-[500px] fixed h-screen flex flex-col justify-between`}>
+            <div className={`${open ? 'w-[80%] ms-0 transition-all  delay-150' : ''} bg-[#003461] px-3 py-10  text-white -ms-[500px] fixed h-screen flex flex-col z-10 justify-between`}>
 
                 <ul className="flex flex-col">
                     <li>
