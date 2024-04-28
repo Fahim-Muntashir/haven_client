@@ -129,7 +129,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                         <div>
-                            <button className='bg-[rgb(0,174,255)] px-6 py-1 font-bold'>Login</button>
+                            <button className='bg-[rgb(0,174,255)]  px-6 py-1 font-bold'>Login</button>
                             <button onClick={() => setOpen(true)} className={`${open ? "hidden" : ""} md:hidden px-3`} > <GiHamburgerMenu />
                             </button>
                             <button onClick={() => setOpen(false)} className={`${open ? "" : "hidden"} md:hidden px-3`}><IoMdClose />
