@@ -24,8 +24,10 @@ const latestPropertiesData = [
 const LatestItem = () => {
     return (
         <div className='my-20 w-4/5 mx-auto'>
+
             <div className='text-center'>
                 <h1 className='text-4xl  text-gray-900'>Latest Properties</h1>
+
                 <p className='my-1 text-sm text-gray-700'>Unveiling the Newest Additions to Our Property Portfolio - <br /> Your Gateway to the Latest Listings!</p>
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 justify-between gap-x-5 gap-y-10 my-10'>
