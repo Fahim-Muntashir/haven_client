@@ -1,4 +1,6 @@
+'use client'
 import Container from '@/app/components/Shared/Container';
+import Ratings from '@/app/components/ui/Ratings';
 import React from 'react';
 import { FaPhoneAlt, FaRegHeart } from 'react-icons/fa';
 import { FiShare2 } from 'react-icons/fi';
@@ -169,11 +171,11 @@ const page = ({ params }: { params: {} }) => {
 
                     </div>
 
-                    {/* The Agent */}
-                    <div className='col-span-4 h-screen   sticky top-0'>
+                    {/* The Agent Profile*/}
+                    <div className='col-span-4 h-screen sticky top-0'>
                         <div className=''>
-                            <div className="h-screen bg-gray-200  dark:bg-gray-800   flex flex-wrap items-center  justify-center  ">
-                                <div className="container sm:w-full md:w-4/5  shadow-lg    transform   duration-200 easy-in-out">
+                            <div className="h-screen bg-white  p-2 flex flex-wrap justify-center  ">
+                                <div className="container   transform   duration-200 easy-in-out">
                                     <div className=" overflow-hidden" >
                                         <img className="w-full" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80" alt="" />
                                     </div>
@@ -187,14 +189,21 @@ const page = ({ params }: { params: {} }) => {
                                             <a className="text-gray-400 mt-2 hover:text-blue-500" href="https://www.instagram.com/immohitdhiman/" target="BLANK()">@immohitdhiman</a>
                                             <p className="mt-2 text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
                                         </div>
+                                        <div className='flex justify-center items-center'>
+
+                                            <Ratings></Ratings>
+
+                                        </div>
                                         <hr className="mt-6" />
-                                        <div className="flex  bg-gray-50 ">
-                                            <div className="text-center w-1/2 p-4 hover:bg-gray-100 cursor-pointer">
-                                                <p><span className="font-semibold">2.5 k </span> Followers</p>
+                                        <div className="flex  bg-gray-50  mt-10">
+                                            <div className="text-center w-1/2 p-2 hover:bg-gray-100 cursor-pointer">
+                                                <p><span className="font-semibold">40
+                                                    <br /></span> Reviews</p>
                                             </div>
                                             <div className="border"></div>
-                                            <div className="text-center w-1/2 p-4 hover:bg-gray-100 cursor-pointer">
-                                                <p> <span className="font-semibold">2.0 k </span> Following</p>
+                                            <div className="text-center w-1/2 p-2 hover:bg-gray-100 cursor-pointer">
+                                                <p> <span className="font-semibold">30</span>
+                                                    <br />Apertment Sell </p>
                                             </div>
 
                                         </div>
