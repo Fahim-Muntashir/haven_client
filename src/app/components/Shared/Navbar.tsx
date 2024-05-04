@@ -9,6 +9,7 @@ import logo from '../../../../public/assests/haven.png'
 import { MdOutlineEmail } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
+import Link from 'next/link';
 
 
 
@@ -118,7 +119,7 @@ const Navbar = () => {
                                     <a href="#" className="block py-2 px-3 " aria-current="page">Home</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="block py-2 px-3 ">About</a>
+                                    <Link href="/properties" className="block py-2 px-3  " >Properties</Link>
                                 </li>
                                 <li>
                                     <a href="#" className="block py-2 px-3 ">Services</a>
@@ -151,7 +152,7 @@ const Navbar = () => {
                         <a href="#" className="block py-2 px-3 border-b my-1 border-b-gray-600" aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="#" className="block py-2 px-3 border-b my-1 border-b-gray-600" >About</a>
+                        <Link href="/properties" className="block py-2 px-3 border-b my-1 border-b-gray-600" >Properties</Link>
                     </li>
                     <li>
                         <a href="#" className="block py-2 px-3 border-b my-1 border-b-gray-600" >Services</a>
